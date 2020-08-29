@@ -1,18 +1,22 @@
 body {
-  padding: 0px 80px;
+  padding: 0px;
 }
-h1 {
+h1, p {
   font-family: 'Baloo Bhai', cursive;
   text-align: center;
   font-size: 50px;
   color: #FCB865;
 }
+p {
+  font-size: 1em;
+}
 
 #frame {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 96vh;
 }
 #frame > div {
  flex: 1;
@@ -41,4 +45,26 @@ h1 {
   justify-content: center;
   margin: 10px;
   font-family: 'Baloo Bhai', cursive;
+}
+
+.blue-text {
+  color: cadetblue;
+}
+.col-one {
+  max-height: 300px;
+}
+.col-one, .col-two {
+  min-width: 500px;
+}
+.col-three {
+  width: 98%;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) { 
+  #frame { 
+    flex-direction: row;
+  } 
 }
